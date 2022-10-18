@@ -1,6 +1,6 @@
 ﻿using SharpDX.XInput;
 using System;
-using System.Windows;
+using System.Drawing;
 
 namespace InputActions {
     public class XInputController {
@@ -45,13 +45,13 @@ namespace InputActions {
                 var gamepad = _controller.GetState().Gamepad;
 
                 var leftThumb = new Point(0, 0);
-                leftThumb.X = (Math.Abs((float) gamepad.LeftThumbX) < _deadband) ? 0 : (float) gamepad.LeftThumbX / short.MinValue * -100;
-                leftThumb.Y = (Math.Abs((float) gamepad.LeftThumbY) < _deadband) ? 0 : (float) gamepad.LeftThumbY / short.MaxValue * -100;
+                leftThumb.X = (Math.Abs((float) gamepad.LeftThumbX) < _deadband) ? 0 : gamepad.LeftThumbX / short.MinValue * -100;
+                leftThumb.Y = (Math.Abs((float) gamepad.LeftThumbY) < _deadband) ? 0 : gamepad.LeftThumbY / short.MaxValue * -100;
                 LeftThumb = leftThumb;
 
                 var rightThumb = new Point(0, 0);
-                rightThumb.X = (Math.Abs((float) gamepad.RightThumbX) < _deadband) ? 0 : (float) gamepad.RightThumbX / short.MinValue * -100;
-                rightThumb.Y = (Math.Abs((float) gamepad.RightThumbY) < _deadband) ? 0 : (float) gamepad.RightThumbY / short.MinValue * -100;
+                rightThumb.X = (Math.Abs((float) gamepad.RightThumbX) < _deadband) ? 0 : gamepad.RightThumbX / short.MinValue * -100;
+                rightThumb.Y = (Math.Abs((float) gamepad.RightThumbY) < _deadband) ? 0 : gamepad.RightThumbY / short.MinValue * -100;
                 RightThumb = rightThumb;
 
                 ADown = gamepad.Buttons == GamepadButtonFlags.A;
