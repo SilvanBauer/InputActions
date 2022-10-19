@@ -3,6 +3,15 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <OutputType>Library</OutputType>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <PackageId>SilvanBauer.InputActions</PackageId>
+    <Title>InputActions</Title>
+    <Authors>SilvanBauer</Authors>
+    <PackageTags>InputActions;OutputActions;UserActions;Input;Output;User;KeyboardHook;MouseHook;Keyboard;Mouse;SystemHooks;User32</PackageTags>
+    <PackageReleaseNotes>Initial release of InputActions on NuGet</PackageReleaseNotes>
+    <Version>1.0.0</Version>
+    <FileVersion>1.1.0.1</FileVersion>
+    <AssemblyVersion>1.1.0.1</AssemblyVersion>
+    <Copyright>Copyright © Silvan Bauer 2022</Copyright>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
