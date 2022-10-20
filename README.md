@@ -7,7 +7,7 @@ Additionally the Input Actions library also provides support for capturing xbox 
 
 ## Classes and Methods
 ### MouseActions
-`MouseActions` is the static class providing input and output methods for mouse actions.
+`MouseActions` is the static class providing user input and output methods for mouse actions.
 - bool SetMousePosition(int x, int y)
 - Win32Point GetMousePosition()
 - void RightClick(int x, int y)
@@ -26,7 +26,7 @@ Additionally the Input Actions library also provides support for capturing xbox 
 - void UnhookMouseHook()
 
 ### KeyboardActions
-`KeyboardActions` is the static class providing hook methods for keyboard actions.
+`KeyboardActions` is the static class providing user input and output methods for keyboard actions.
 - KeyState GetKey(KeyboardKey key)
 - void KeyPress(KeyboardKey key)
 - void KeyUp(KeyboardKey key)
