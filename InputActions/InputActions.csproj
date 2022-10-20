@@ -6,11 +6,12 @@
     <PackageId>SilvanBauer.InputActions</PackageId>
     <Title>InputActions</Title>
     <Authors>SilvanBauer</Authors>
-    <PackageTags>InputActions;OutputActions;UserActions;Input;Output;User;KeyboardHook;MouseHook;Keyboard;Mouse;SystemHooks;User32</PackageTags>
-    <PackageReleaseNotes>Initial release of InputActions on NuGet</PackageReleaseNotes>
-    <Version>1.0.0</Version>
-    <FileVersion>1.1.0.1</FileVersion>
-    <AssemblyVersion>1.1.0.1</AssemblyVersion>
+    <PackageTags>InputActions;OutputActions;UserActions;Input;Output;KeyboardHook;MouseHook;Keyboard;Mouse;KeyboardActions;MouseActions;SystemHooks;WindowsHooks;Actions;User32</PackageTags>
+    <PackageReleaseNotes>Added methods for getting and manipulating keys</PackageReleaseNotes>
+    <PackageDescription>Class library to get mouse and keyboard inputs with hooks and make outputs. Inputs can also be captured from xbox controllers.</PackageDescription>
+    <Version>1.0.1</Version>
+    <FileVersion>1.1.1.0</FileVersion>
+    <AssemblyVersion>1.1.1.0</AssemblyVersion>
     <Copyright>Copyright © Silvan Bauer 2022</Copyright>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
