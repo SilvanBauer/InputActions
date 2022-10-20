@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
 namespace InputActions {
-    public class MouseActions {
+    public static class MouseActions {
         private delegate IntPtr LowLevelMouseProc(int nCode, IntPtr wParam, IntPtr lParam);
 
         private static readonly LowLevelMouseProc _mouseProc = MouseProc;

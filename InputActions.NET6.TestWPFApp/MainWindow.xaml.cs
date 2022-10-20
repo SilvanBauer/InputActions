@@ -1,10 +1,10 @@
-﻿using InputActions;
-using System;
+﻿using System;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Windows;
 using System.Windows.Input;
 
-namespace InputActionsTestWPFApp {
+namespace InputActions.NET6.TestWPFApp {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -28,13 +28,13 @@ namespace InputActionsTestWPFApp {
         private void TestKeyboardHookAction(int keyCode) {
             var keyName = Enum.GetName(typeof(KeyboardKey), keyCode);
 
-            Console.WriteLine($"{(keyName != null ? keyName : keyCode.ToString())} / A is pressed: {Keyboard.IsKeyDown(Key.A)}");
+            Trace.WriteLine($"{(keyName != null ? keyName : keyCode.ToString())} / A still pressed: {Keyboard.IsKeyDown(Key.A)} / LShift pressed: {Keyboard.IsKeyDown(Key.LeftShift)}");
         }
 
         private void TestMouseHookAction(int mouseAction) {
             var mouseActionName = Enum.GetName(typeof(MouseEvent), mouseAction);
 
-            Console.WriteLine(mouseActionName);
+            Trace.WriteLine(mouseActionName);
         }
 
         private void Window_Closing(object sender, CancelEventArgs e) {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 
 namespace InputActions {
-    public class KeyboardActions {
+    public static class KeyboardActions {
         private delegate IntPtr LowLevelKeyboardProc(int nCode, IntPtr wParam, IntPtr lParam);
 
         private static readonly LowLevelKeyboardProc _keyboardProc = KeyboardProc;

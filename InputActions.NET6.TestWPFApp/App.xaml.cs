@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace InputActionsTestWPFApp {
+namespace InputActions.NET6.TestWPFApp {
     /// <summary>
     /// Interaction logic for App.xaml
     /// </summary>
