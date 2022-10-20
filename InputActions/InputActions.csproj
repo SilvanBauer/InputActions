@@ -12,6 +12,7 @@
     <FileVersion>1.1.0.1</FileVersion>
     <AssemblyVersion>1.1.0.1</AssemblyVersion>
     <Copyright>Copyright © Silvan Bauer 2022</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.CSharp" Version="4.7.0" />
