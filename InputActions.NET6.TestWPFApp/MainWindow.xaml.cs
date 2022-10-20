@@ -27,14 +27,22 @@ namespace InputActions.NET6.TestWPFApp {
 
         private void TestKeyboardHookAction(int keyCode) {
             var keyName = Enum.GetName(typeof(KeyboardKey), keyCode);
+            var keyState = Enum.GetName(typeof(KeyState), KeyboardActions.GetKey(KeyboardKey.LShift));
 
-            Trace.WriteLine($"{(keyName != null ? keyName : keyCode.ToString())} / A still pressed: {Keyboard.IsKeyDown(Key.A)} / LShift pressed: {Keyboard.IsKeyDown(Key.LeftShift)}");
+            Trace.WriteLine(keyName != null ? keyName : keyCode.ToString());
+            Trace.WriteLine(keyState);
         }
 
         private void TestMouseHookAction(int mouseAction) {
             var mouseActionName = Enum.GetName(typeof(MouseEvent), mouseAction);
 
             Trace.WriteLine(mouseActionName);
+
+            KeyboardActions.KeyDown(KeyboardKey.LShift);
+            KeyboardActions.KeyPress(KeyboardKey.A);
+            KeyboardActions.KeyPress(KeyboardKey.B);
+            KeyboardActions.KeyPress(KeyboardKey.C);
+            KeyboardActions.KeyUp(KeyboardKey.LShift);
         }
 
         private void Window_Closing(object sender, CancelEventArgs e) {

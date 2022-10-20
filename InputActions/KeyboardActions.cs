@@ -12,6 +12,12 @@ namespace InputActions {
         private static IntPtr _keyboardHook = IntPtr.Zero;
 
         [DllImport("user32.dll")]
+        private static extern short GetKeyState(KeyboardKey key);
+
+        [DllImport("user32.dll")]
+        private static extern void keybd_event(byte bVk, byte bScan, int dwFlags, int dwExtraInfo);
+
+        [DllImport("user32.dll")]
         private static extern IntPtr SetWindowsHookEx(int idHook, LowLevelKeyboardProc callback, IntPtr hInstance, uint threadId);
 
         [DllImport("user32.dll")]
@@ -22,6 +28,27 @@ namespace InputActions {
 
         [DllImport("kernel32.dll")]
         private static extern IntPtr LoadLibrary(string lpFileName);
+
+        public static KeyState GetKey(KeyboardKey key) {
+            var state = GetKeyState(key);
+            switch (state) {
+                case 0:
+                    return KeyState.Up;
+                case 1:
+                    return KeyState.Down;
+                default:
+                    return KeyState.HeldDown;
+            }
+        }
+
+        public static void KeyPress(KeyboardKey key) {
+            keybd_event((byte)key, 0, (int)KeyEventFlags.KeyDown, 0);
+            keybd_event((byte)key, 0, (int)KeyEventFlags.KeyUp, 0);
+        }
+
+        public static void KeyUp(KeyboardKey key) => keybd_event((byte)key, 0, (int)KeyEventFlags.KeyDown, 0);
+
+        public static void KeyDown(KeyboardKey key) => keybd_event((byte)key, 0, (int)KeyEventFlags.KeyUp, 0);
 
         public static void AddKeyboardHookAction(KeyboardHookAction keyboardHookAction) {
             _keyboardHookActions.Add(keyboardHookAction.Key, keyboardHookAction);
