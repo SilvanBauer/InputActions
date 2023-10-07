@@ -73,10 +73,5 @@ private void TestMouseHookAction(int mouseAction) {
 }
 ```
 
-### XInputController (Xbox Controllers)
-The `XInputController` is a class which can be instantiated and with the `Update` method the current controller state of the first connected controller will be set in the `XInputController` instance.
-
 ## Links
 This class library is available on [NuGet](https://www.nuget.org/packages/SilvanBauer.InputActions).
-
-If you're interested maybe check out [my blog](https://silvanbauer.wixsite.com/silvan-bauers-blog).
