@@ -3,7 +3,6 @@ A small class library which provides classes with methods to capture user inputs
 This is made possible by using the user32.dll.
 
 This library was created to provide an easy to use solution for capturing and making user inputs with the keyboard or the mouse.
-Additionally the Input Actions library also provides support for capturing xbox controller inputs.
 
 ## Classes and Methods
 ### MouseActions
